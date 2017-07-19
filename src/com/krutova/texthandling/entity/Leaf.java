@@ -1,4 +1,4 @@
-package com.krutova.texthandling.entity; 
+package com.krutova.texthandling.entity;
 
 public class Leaf implements TextComponent {
 	private String string;  //private Character string; 
