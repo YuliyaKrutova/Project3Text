@@ -12,7 +12,7 @@ public class LexemeParser {
 	private Pattern lexemePattern = Pattern.compile(LEXEME_REGEX);
 	private WordParser nextParser = new WordParser();
 	
-	public TextComposite parser(String textString, TextComposite composite){
+	public TextComponent parser(String textString, TextComposite composite){
 		TextComposite sentenceComposite = new TextComposite(TextComponentType.SENTENCE);
 		Matcher sentenceMatcher = lexemePattern.matcher(textString);
 		
