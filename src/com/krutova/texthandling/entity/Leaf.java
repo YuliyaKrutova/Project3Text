@@ -1,7 +1,7 @@
 package com.krutova.texthandling.entity;
 
 public class Leaf implements TextComponent {
-	private String string;
+	private String string;  //private Character string; 
 	
 	public Leaf(String string) {
 		this.string = string;
