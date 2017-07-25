@@ -35,19 +35,20 @@ public class TextMain {
 		ParserTextToParagraph par5 = new ParserTextToParagraph();
 		TextComposite comp = new TextComposite(TextComponentType.WORD);
 		par5.parser(textString, comp);
+		//par5.parser("Qqqqq wwwww rrrrr, rrrr. Sssss eeeee fffff!"/*textString*/, comp);
 		//par4.parser("Bsdfg qwerty, qqqqqqq. Aasdasdasd adasd!", comp);
 		//par3.parser("asdfg qwerty,", comp);
 		//par2.parser("qwerty,", comp);
 		//par.parser("qwerty", comp);
+
+		System.out.println(comp.toString());
+
 	
-		for (TextComponent str: comp.getComponentList()){
-			System.out.println(str.toString());
-		}
-		
 		TextComposite ar1 = (TextComposite) comp.getComponentList().get(0);
 		TextComposite ar2 = (TextComposite) ar1.getComponentList().get(1);
 		
 		System.out.println(ar2.getComponentList().toString());
+		System.out.println(ar2.getComponentType());
 		
 		System.out.println("***************************************");
 		

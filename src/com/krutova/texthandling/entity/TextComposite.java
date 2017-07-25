@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class TextComposite implements TextComponent {
 	
 	private TextComponentType componentType;
-	
+
 	private ArrayList<TextComponent> componentList = new ArrayList<>();
 	
 	public TextComposite(TextComponentType componentType) {
@@ -22,7 +22,26 @@ public class TextComposite implements TextComponent {
 
 	@Override
 	public String toString() {
-		return "componentList=" + componentList;
+		StringBuilder resultString = new StringBuilder();
+		 for (TextComponent comp: componentList){
+			 switch (componentType){
+			 case PARAGRAPH:{
+				 resultString.append(comp.toString());
+				 resultString.append("\n");
+				 break;
+			 	}
+			 case LEXEME:{
+				 if (!comp.toString().matches("\\p{Punct}")){
+				 resultString.append(" ");
+				 }
+				 resultString.append(comp.toString());
+				 break;
+			 	}
+			 default: resultString.append(comp.toString());
+			 }
+		 }
+		
+		return resultString.toString();
 	}
 
 	public TextComponentType getComponentType() {

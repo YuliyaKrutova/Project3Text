@@ -6,5 +6,5 @@ public enum TextComponentType {
     SENTENCE,
     LEXEME,
     WORD,
-    SYMBOL
+    PUNCT
 }

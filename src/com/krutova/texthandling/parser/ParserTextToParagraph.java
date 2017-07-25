@@ -16,7 +16,6 @@ public class ParserTextToParagraph {
 		Matcher paragraphMatcher = paragraphPattern.matcher(textString);
 		
 		while(paragraphMatcher.find()){
-			System.out.println(paragraphMatcher.group());
 			compositeParagraph=nextParser.parser(paragraphMatcher.group(), compositeParagraph);
 			
 		} 

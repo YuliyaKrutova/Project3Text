@@ -15,7 +15,7 @@ public class ParserLexemeToWordPunct {
 	
 	public TextComposite parser(String textString, TextComposite compositeLexeme){
 		TextComposite compositeWord = new TextComposite(TextComponentType.WORD);
-		TextComposite compositePunct = new TextComposite(TextComponentType.SYMBOL);
+		TextComposite compositePunct = new TextComposite(TextComponentType.PUNCT);
 		Matcher wordMatcher = wordPattern.matcher(textString);
 		Matcher punctMatcher = punctPattern.matcher(textString);
 		
