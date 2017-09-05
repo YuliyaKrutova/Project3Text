@@ -6,9 +6,8 @@ import java.util.regex.Pattern;
 import com.krutova.texthandling.entity.CharacterLeaf;
 import com.krutova.texthandling.entity.TextComposite;
 
-public class ParserWordToCharacter {
+public class WordParser extends AbstractParser {
 	
-	private final static String SYMBOL_REGEX = "."; //вынести отдельно все регулярные
 	private Pattern pattern = Pattern.compile(SYMBOL_REGEX);
 	
 	public TextComposite parser(String textString, TextComposite composite){

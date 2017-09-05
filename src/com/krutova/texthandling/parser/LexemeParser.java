@@ -6,12 +6,10 @@ import java.util.regex.Pattern;
 import com.krutova.texthandling.entity.TextComponentType;
 import com.krutova.texthandling.entity.TextComposite;
 
-public class ParserLexemeToWordPunct {
-	private final static String WORD_REGEX = "([A-z])+"; //вынести отдельно все регулярные
-	private final static String PUNKT_REGEX = "\\p{Punct}"; //вынести отдельно все регулярные
+public class LexemeParser extends AbstractParser {
 	private Pattern wordPattern = Pattern.compile(WORD_REGEX);
 	private Pattern punctPattern = Pattern.compile(PUNKT_REGEX);
-	private ParserWordToCharacter nextParser = new ParserWordToCharacter();
+	private WordParser nextParser = new WordParser();
 	
 	public TextComposite parser(String textString, TextComposite compositeLexeme){
 		TextComposite compositeWord = new TextComposite(TextComponentType.WORD);

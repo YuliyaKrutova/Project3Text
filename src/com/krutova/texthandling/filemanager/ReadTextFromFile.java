@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Collectors;
 
-import com.krutova.texthandling.textexception.TextException;
+import com.krutova.texthandling.exception.TextException;
 
 public class ReadTextFromFile {
 	

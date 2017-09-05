@@ -11,6 +11,9 @@ public class TextComposite implements TextComponent {
 	public TextComposite(TextComponentType componentType) {
 		this.componentType = componentType;
 	}
+	
+	public TextComposite() {
+	}
 
 	public void addComponent(TextComponent component){
 		componentList.add(component);
@@ -26,6 +29,7 @@ public class TextComposite implements TextComponent {
 		 for (TextComponent comp: componentList){
 			 switch (componentType){
 			 case PARAGRAPH:{
+				 resultString.append("    ");
 				 resultString.append(comp.toString());
 				 resultString.append("\n");
 				 break;

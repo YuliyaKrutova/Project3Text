@@ -6,10 +6,10 @@ import java.util.regex.Pattern;
 import com.krutova.texthandling.entity.TextComponentType;
 import com.krutova.texthandling.entity.TextComposite;
 
-public class ParserParagraphToSentence {
-	private final static String SENTENCE_REGEX = ".*?(?:[.!:]\\s?|\\?\\s)"; //вынести отдельно все регулярные
+public class ParagraphParser extends AbstractParser {
+	
 	private Pattern sentencePattern = Pattern.compile(SENTENCE_REGEX);
-	private ParserSentenceToLexeme nextParser = new ParserSentenceToLexeme();
+	private SentenceParser nextParser = new SentenceParser();
 	
 	public TextComposite parser(String textString, TextComposite compositeParagraph){
 		TextComposite compositeSentence = new TextComposite(TextComponentType.SENTENCE);

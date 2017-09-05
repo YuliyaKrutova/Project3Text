@@ -3,14 +3,13 @@ package com.krutova.texthandling.parser;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.krutova.texthandling.entity.TextComponent;
 import com.krutova.texthandling.entity.TextComponentType;
 import com.krutova.texthandling.entity.TextComposite;
 
-public class ParserSentenceToLexeme {
-	private final static String LEXEME_REGEX = "([A-z])+\\p{Punct}?"; //вынести отдельно все регулярные
+public class SentenceParser extends AbstractParser {
+	
 	private Pattern lexemePattern = Pattern.compile(LEXEME_REGEX);
-	private ParserLexemeToWordPunct nextParser = new ParserLexemeToWordPunct();
+	private LexemeParser nextParser = new LexemeParser();
 	
 	public TextComposite parser(String textString, TextComposite compositeSentense){
 		TextComposite compositeLexeme = new TextComposite(TextComponentType.LEXEME);

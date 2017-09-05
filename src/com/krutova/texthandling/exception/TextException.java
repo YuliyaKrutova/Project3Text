@@ -1,4 +1,4 @@
-package com.krutova.texthandling.textexception;
+package com.krutova.texthandling.exception;
 
 public class TextException  extends Exception {
 
