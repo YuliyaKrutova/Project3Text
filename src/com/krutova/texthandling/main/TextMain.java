@@ -31,7 +31,7 @@ public class TextMain {
 		SentenceSort sent = new SentenceSort();
 		
 		sent.sortSentenceList(TextAction.listOfComponent(TextComponentType.SENTENCE,composite));
-		//Get sorted Sentences by countwoeds
+		//Get sorted Sentences by countwoeds 
 		sent.getSortSentenceList().entrySet().stream().sorted(Comparator.comparing(e -> e.getKey())).forEach(System.out::println);
 		
 	}
