@@ -8,16 +8,16 @@ import com.krutova.texthandling.entity.TextComponent;
 
 public class SentenceSort {
 
-	private HashMap<Integer,String> sortSentenceList = new HashMap<Integer,String>();
+	private HashMap<Integer,String> sortSentenceMap = new HashMap<Integer,String>();
 	
 	public HashMap<Integer,String> getSortSentenceList() {
-		return sortSentenceList;
+		return sortSentenceMap;
 	}
 
 	public void sortSentenceList(ArrayList<TextComponent> listOfSentence){
 		if (!listOfSentence.isEmpty()){
 			for (TextComponent component: listOfSentence){
-				sortSentenceList.put(TextAction.wordCountInSentence(component.toString()), component.toString());
+				sortSentenceMap.put(TextAction.wordCountInSentence(component.toString()), component.toString());
 		    }
 		}
 	}
